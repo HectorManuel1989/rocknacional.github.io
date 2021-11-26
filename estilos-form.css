@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Lemon&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+
+    /****** PROPIEDAD *****/
+
+    .body {
+        height: 100vh;
+        width: 100%;
+        background-color: #222;
+        display: flex;
+    }
+
+    /************* HEADER ************/
+    header {
+        position: relative;
+        background-color: #222;
+        border-bottom: solid 2px rgb(206, 54, 54);   
+    }
+    header h1 {
+        font-family: 'Lemon', cursive;
+        text-align: center;
+        color: #fff;
+        padding-top: .5em;
+        font-size: calc(1em + 1vw);
+    }
+
+    header span {
+        font-family: 'Lemon', cursive;
+        text-align: center;
+        color: #fff;
+        padding-top: .5em;
+        font-size: calc(.5em + 1vw);
+        animation: animacion 5s linear infinite;
+        -webkit-box-reflect: below -60px linear-gradient(transparent,#0004);
+    }
+
+    /*@keyframes animacion {
+        0%, 18%, 32%, 47%, 63%, 77%, 93%{
+            color: #fff;
+            text-shadow: none;
+        }
+
+        18.3%, 32.3%, 47.3%, 63.2%, 77.5%, 100% {
+            color: rgb(235, 64, 92) ;
+            text-shadow:0 0 10px rgb(161, 63, 80),
+            0 0 40px rgb(235, 64, 92),
+            0 0 80px rgb(235, 64, 92),
+            0 0 120px rgb(235, 64, 92),
+            0 0 400px rgb(235, 64, 92);
+        }
+    } */
+
+    .btn2 {
+        display: inline-block;
+        padding: 5px 5px;
+        margin: 1.2em;
+        font-size: 1.7em;
+        background-color: rgb(14, 13, 13);
+        border-radius: .3em;
+}
+
+    .btn2 a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .btn2:hover {
+        background: rgb(235, 64, 92);
+    }
+
+    .btn2 a:hover {
+        color:#131212;
+    }
+
+
+/******************* CONTENIDO ******************/
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        width: 100%;
+        background:#131212;
+        border-bottom: solid 2px rgb(206, 54, 54); 
+    }
+    form {
+        width: 100%;
+        max-width: 1000px;
+
+    }
+    .contenedor {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        padding: 50px;
+        background: #222;
+        border: 1px solid rgb(235, 64, 92);
+    }
+
+    .contenedor h1 {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .contenedor .fila-1  {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+
+    .contenedor .fila-1 .columna {
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px 0 20px;
+        
+    }
+
+    .contenedor .fila-1 .columna .entrada {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+    }
+
+    .contenedor .fila-1 .columna .entrada input,
+    .contenedor .fila-1 .columna .entrada textarea {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none; 
+        font-size: 15px;
+        padding: 0 11px;
+        z-index: 1;
+        color: #131212;
+    }
+
+    .contenedor .fila-1 .columna .entrada .texto {
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+
+
+    .contenedor .fila-1 .columna .entrada input:focus + .texto,
+    .contenedor .fila-1 .columna .entrada input:valid + .texto,
+    .contenedor .fila-1 .columna .entrada textarea:focus + .texto,
+    .contenedor .fila-1 .columna .entrada textarea:valid + .texto  {
+        top: -35px;
+        left: -10px;
+    }
+
+    .contenedor .fila-1 .columna .entrada .linea {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transition: 0.5s;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+
+    .contenedor .fila-1 .columna .entrada input:focus ~ .linea,
+    .contenedor .fila-1 .columna .entrada input:valid ~ .linea {
+        height: 100%;
+    }
+
+
+    .contenedor .fila-1 .columna .entrada textarea {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+    }
+
+    .contenedor .fila-1 .columna .entrada textarea:focus ~ .linea,
+    .contenedor .fila-1 .columna .entrada textarea:valid ~ .linea {
+        height: 100%;
+    }
+
+
+    .contenedor .fila-1 .columna input[type="submit"] { /*boton enviar*/
+        border: none;
+        padding: 10px 40px;
+        cursor: pointer;
+        outline: none;
+        background-color: rgb(14, 13, 13);
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        border-radius: .4em;
+    }
+
+    .contenedor .fila-1 .columna input[type="submit"]:hover { /*boton enviar*/
+        background: rgb(235, 64, 92);
+        color:#131212;
+    }
+/******************** FOOTER *******************/
+
+    footer {
+        position: relative;
+        background-color: #222;
+        height: 5em;
+        
+    }
+
+    footer h3 {
+        text-align: center;
+        padding-top: 1.4em;
+        color: #fff;
+        
+    }

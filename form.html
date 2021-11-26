@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos-form.css">
+</head>
+<body>
+    <header>
+        <h1>Toda la Biografia del <span>Rock Argentino!!</span></h1> 
+        <div class="btn2">
+            <a href="index.html">Pagina Principal</a>
+        </div>
+    </header>
+        <main>
+            <form action="">
+            <div class="contenedor" >
+                <h1>Contacta con la comunidad del Rock</h1>
+                    <div class="fila-1">
+                        <div class="columna">
+                            <div class="entrada">
+                                <label for="nombre"></label>
+                                <input type="text" name="" id="nombre" required="required">
+                                <span class="texto">Nombre</span>
+                                <span class="linea"></span>                
+                            </div>
+                        </div>
+                        <div class="columna">
+                            <div class="entrada">
+                                <label for="apellido"></label>
+                                <input type="text" name="" id="apellido" required="required">
+                                <span class="texto">Apellido</span>
+                                <span class="linea"></span>                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fila-1">
+                        <div class="columna">
+                            <div class="entrada">
+                                <label for="correo"></label>
+                                <input type="text" name="" id="correo"  required="required">
+                                <span class="texto">Correo Electronico</span>
+                                <span class="linea"></span>                
+                            </div>
+                        </div>
+                        <div class="columna">
+                            <div class="entrada">
+                                <label for="celu"></label>
+                                <input type="text" name="" id="celu" required="required">
+                                <span class="texto">Celular</span>
+                                <span class="linea"></span>                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fila-1">
+                        <div class="columna">
+                            <div class="entrada textarea">
+                                <textarea required="required"></textarea>
+                                <span class="texto">Dejanos tu aporte</span>
+                                <span class="linea"></span>   
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fila-1">
+                        <div class="columna">
+                        <input type="submit" onclick="return enviarFormulario();" value="Enviar">
+                        </div>
+                    </div>
+                    <div id="error"></div>
+            </div> 
+        </form>       
+        </main>
+        <div id="error"></div>
+        <footer>
+            <div>
+                <h3>Desarrollo Web I - Año 2021</h3> 
+            </div>
+        </footer>
+
+<script src="vali.js"></script>        
+</body>
+</html>

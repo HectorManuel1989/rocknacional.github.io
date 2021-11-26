@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Lemon&display=swap");
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+/***************** TITULO *****************/
+
+
+
+header {
+    position:fixed;
+    top: 2px;
+    background: rgb(114, 113, 113);
+    z-index: 900;
+    justify-content: center;
+}
+
+header a {
+    font-family: 'Lemon', cursive;
+    font-size: calc(1em + 1vw);
+    letter-spacing: 5px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+
+
+
+/************** CUERPO DE PAGINA *************/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160vh;
+    background: rgb(114, 112, 113);
+}
+
+.contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width:1100px;
+    margin:20px auto;
+    border-top: solid 1px rgb(161, 157, 157);
+}
+
+.contenedor .tarjeta {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 40px 15px;
+    overflow: hidden; 
+}
+
+.tarjeta { /*efecto sombra de tarjetas */
+    filter: drop-shadow(20px 20px 10px #000000);
+    -webkit-filter: drop-shadow(20px 20px 10px #000000);
+    -moz-filter: drop-shadow(20px 20px 10px #000000);
+}
+
+
+.contenedor .tarjeta .imgT,
+.contenedor .tarjeta .contenedor-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor .tarjeta .imgT img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* tamaño altura de imagen */
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor .tarjeta .contenedor-imagen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* cover de la imagen */
+    height: 100%;
+    background-color: #fff;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out; /* tiempo de salida */
+    transform-origin: left;
+}
+
+.contenedor .tarjeta:hover .contenedor-imagen::before {
+    transform: scale(1); /*a cuanto se agranda
+    transition: transform 0.5s ease-in-out; /* tiempo de entrada */
+    transform-origin: left;
+}
+
+.contenedor .tarjeta .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .tarjeta .contenedor-imagen .contenido {
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.8s; /*ajusto el tiempo de entrada de texto */
+    transform: translateX(-300px);
+}
+
+.contenedor .tarjeta:hover .contenedor-imagen .contenido {
+    transform: translateX(0px); /*centro el texto */
+}
+
+.contenedor .tarjeta .contenedor-imagen .contenido a {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #222;
+    font-family: 'Lemon', cursive; ;
+}
+
+.contenedor .tarjeta .contenedor-imagen .contenido a:hover {
+    color: rgb(235, 64, 92);
+}
+
+.contenedor .tarjeta .contenedor-imagen .contenido p {
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+
+
+
+/********************** PIE DE PAGINA **************/
+
+
+footer {
+    border-top: solid 1px rgb(161, 157, 157);
+    
+}
+
+footer h3 {
+	color: #fff;
+    padding-top: 50px;
+}
+

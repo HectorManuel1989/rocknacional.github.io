@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Lemon&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+
+    /****** PROPIEDAD *****/
+
+    .body {
+        height: 100vh;
+        width: 100%;
+        background-color: #222;
+        display: flex;
+    }
+
+    /************* HEADER ************/
+    header {
+        position: relative;
+        background-color: #222;
+        border-bottom: solid 2px rgb(206, 54, 54);   
+    }
+    header h1 {
+        font-family: 'Lemon', cursive;
+        text-align: center;
+        color: #fff;
+        padding-top: .5em;
+    }
+
+      /* BOTON REGRESO */
+
+    .btn {
+        display: inline-block;
+        padding: 5px 5px;
+        margin: 1.2em;
+        font-size: 1.7em;
+        background-color: rgb(14, 13, 13);
+        border-radius: .3em;
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .btn:hover {
+        background: rgb(235, 64, 92);
+    }
+
+    .btn a:hover {
+        color:#131212;
+    }
+
+    
+
+    /********* CONTENNIDO PAGINA **********/
+
+    main {
+        background-color:rgb(92, 90, 90);
+        position: relative;
+        border-bottom: solid 2px rgb(206, 54, 54); 
+    }
+
+    .contenido{
+        height: 100%;
+        width: 100%;
+    }
+
+    .contenido h1 {  /*Titulo principal*/
+        font-size: 4em;
+        padding-left: .4em;
+        color: #fff;
+        filter: drop-shadow(20px 20px 10px #c9f576);
+        -webkit-filter: drop-shadow(20px 20px 10px #b0f561);
+        -moz-filter: drop-shadow(20px 20px 10px #dafa66);
+    }
+
+    span {
+        font-family: 'Luckiest Guy', cursive;
+        color: #131212;
+    }
+
+    .info { /*span wikipedia*/
+        font-size: 1em;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #222;
+    }
+    
+
+    .contenido p {
+        color: rgb(7, 7, 7);
+        font-size: 1.4em;
+        padding: 2em;
+        filter: drop-shadow(30px 30px 20px rgb(250, 240, 240));
+    }
+
+    .video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+    .video iframe,
+    .video object,
+    .video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 1.2em;
+    font-size: 1.7em;
+    background-color: rgb(14, 13, 13);
+    border-radius: .3em;
+}
+
+.btn2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn2:hover {
+    background: rgb(235, 64, 92);
+}
+
+.btn2 a:hover {
+    color:#131212;
+}
+
+
+/******************** FOOTER *******************/
+
+footer {
+    position: relative;
+    background-color: #222;
+    height: 5em;
+    
+}
+
+footer h3 {
+    text-align: center;
+    padding-top: 1.4em;
+	color: #fff;
+    
+}
